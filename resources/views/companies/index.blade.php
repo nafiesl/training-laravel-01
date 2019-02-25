@@ -3,7 +3,10 @@
 @section('content')
 
 <div class="card">
-    <div class="card-header">Company Listing</div>
+    <div class="card-header">
+        Company Listing
+        <a href="{{ url('companies/create') }}" class="float-right">Create new Company</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
