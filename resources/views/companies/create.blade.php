@@ -6,7 +6,8 @@
     <div class="col-6">
         <div class="card">
             <div class="card-header">Create new Company</div>
-            <form action="#">
+            <form action="{{ url('companies') }}" method="post">
+                {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name" class="form-label">Company Name</label>
