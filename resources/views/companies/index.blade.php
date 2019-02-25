@@ -15,13 +15,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Infokom Company</td>
-                <td>email@infokom.com</td>
-                <td>www.infokom.com</td>
-                <td>Jln. Bali</td>
-            </tr>
+            @php
+                $no = 1;
+            @endphp
+            @foreach ($companies as $company)
+                <tr>
+                    <td>{{ $no++ }}</td>
+                    <td>{{ $company->name }}</td>
+                    <td>{{ $company->email }}</td>
+                    <td>{{ $company->website }}</td>
+                    <td>{{ $company->address }}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
