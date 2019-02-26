@@ -23,4 +23,4 @@ Route::get('companies', 'CompanyController@index');
 Route::get('companies/create', 'CompanyController@create');
 Route::post('companies', 'CompanyController@store');
 Route::get('companies/{id}', 'CompanyController@show');
-Route::post('companies/{id}/delete', 'CompanyController@delete');
+Route::delete('companies/{id}', 'CompanyController@destroy');
