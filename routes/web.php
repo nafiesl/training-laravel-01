@@ -23,4 +23,6 @@ Route::get('companies', 'CompanyController@index');
 Route::get('companies/create', 'CompanyController@create');
 Route::post('companies', 'CompanyController@store');
 Route::get('companies/{id}', 'CompanyController@show');
+Route::get('companies/{id}/edit', 'CompanyController@edit');
+Route::patch('companies/{id}', 'CompanyController@update');
 Route::delete('companies/{id}', 'CompanyController@destroy');
