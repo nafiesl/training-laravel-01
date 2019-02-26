@@ -32,7 +32,7 @@
     </div>
     <div class="col-7">
         <div class="float-right">
-            <form action="{{ url('companies/'.$company->id.'/delete') }}" method="post" style="display: inline;">
+            <form action="{{ url('companies/'.$company->id.'/delete') }}" method="post" style="display: inline;" onsubmit="return confirm('Are you sure to delete this company?');">
                 {{ csrf_field() }}
                 <button class="btn btn-danger">Delete Company</button>
             </form>
