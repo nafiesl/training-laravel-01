@@ -30,4 +30,11 @@ class CompanyController extends Controller
 
         return redirect('companies');
     }
+
+    public function show($id)
+    {
+        $company = Company::find($id);
+
+        return view('companies.show', compact('company'));
+    }
 }

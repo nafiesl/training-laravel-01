@@ -15,6 +15,7 @@
                 <th>Email</th>
                 <th>Website</th>
                 <th>Address</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,7 @@
                     <td>{{ $company->email }}</td>
                     <td>{{ $company->website }}</td>
                     <td>{{ $company->address }}</td>
+                    <td><a href="{{ url('companies/'.$company->id) }}">View Detail</a></td>
                 </tr>
             @endforeach
         </tbody>
