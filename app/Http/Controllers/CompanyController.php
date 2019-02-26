@@ -37,4 +37,11 @@ class CompanyController extends Controller
 
         return view('companies.show', compact('company'));
     }
+
+    public function delete($id)
+    {
+        Company::find($id)->delete();
+
+        return redirect('companies');
+    }
 }

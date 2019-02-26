@@ -31,7 +31,13 @@
         </div>
     </div>
     <div class="col-7">
-        <a href="{{ url('companies') }}" class="btn btn-secondary float-right">Back to Company List</a>
+        <div class="float-right">
+            <form action="{{ url('companies/'.$company->id.'/delete') }}" method="post" style="display: inline;">
+                {{ csrf_field() }}
+                <button class="btn btn-danger">Delete Company</button>
+            </form>
+            <a href="{{ url('companies') }}" class="btn btn-secondary">Back to Company List</a>
+        </div>
     </div>
 </div>
 
