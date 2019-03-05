@@ -10,6 +10,15 @@
                 {{ csrf_field() }} {{ method_field('PATCH') }}
                 <div class="card-body">
                     <div class="form-group">
+                        <label for="company_id" class="form-label">Company</label>
+                        <select name="company_id" id="company_id" class="form-control">
+                                <option value="">-- Select one company --</option>
+                            @foreach ($companies as $company)
+                                <option value="{{ $company->id }}" {{ $company->id == $employe->company_id ? 'selected' : '' }}>{{ $company->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="first_name" class="form-label">First Name</label>
                         <input type="text" name="first_name" class="form-control" value="{{ $employe->first_name }}" required>
                     </div>
