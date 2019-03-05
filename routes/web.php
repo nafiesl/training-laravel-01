@@ -26,3 +26,11 @@ Route::get('companies/{id}', 'CompanyController@show');
 Route::get('companies/{id}/edit', 'CompanyController@edit');
 Route::patch('companies/{id}', 'CompanyController@update');
 Route::delete('companies/{id}', 'CompanyController@destroy');
+
+Route::get('employes', 'EmployeController@index');
+Route::get('employes/create', 'EmployeController@create');
+Route::post('employes', 'EmployeController@store');
+Route::get('employes/{id}', 'EmployeController@show');
+Route::get('employes/{id}/edit', 'EmployeController@edit');
+Route::patch('employes/{id}', 'EmployeController@update');
+Route::delete('employes/{id}', 'EmployeController@destroy');
