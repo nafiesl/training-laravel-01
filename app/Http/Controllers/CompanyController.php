@@ -15,6 +15,7 @@ class CompanyController extends Controller
             ->orWhere('email', 'like', $searchKeyword)
             ->orWhere('website', 'like', $searchKeyword)
             ->orWhere('address', 'like', $searchKeyword)
+            ->withCount('employes')
             ->get();
 
         return view('companies.index', compact('companies'));

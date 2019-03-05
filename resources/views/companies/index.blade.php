@@ -32,6 +32,7 @@
                 <th>Email</th>
                 <th>Website</th>
                 <th>Address</th>
+                <th class="text-center">Employes Count</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -46,6 +47,7 @@
                     <td>{{ $company->email }}</td>
                     <td>{{ $company->website }}</td>
                     <td>{{ $company->address }}</td>
+                    <td class="text-center">{{ $company->employes_count }}</td>
                     <td><a href="{{ url('companies/'.$company->id) }}">View Detail</a></td>
                 </tr>
             @endforeach
