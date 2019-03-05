@@ -57,14 +57,18 @@
                     @php
                         $no = 1;
                     @endphp
-                    @foreach ($company->employes as $employe)
+                    @forelse ($company->employes as $employe)
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $employe->first_name }} {{ $employe->last_name }}</td>
                             <td>{{ $employe->phone }}</td>
                             <td>{{ $employe->email }}</td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="4">No employe in this company.</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
