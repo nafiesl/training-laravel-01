@@ -23,12 +23,15 @@ class EmployeController extends Controller
 
     public function create()
     {
-        return view('employes.create');
+        $companies = Company::all();
+
+        return view('employes.create', compact('companies'));
     }
 
     public function store(Request $request)
     {
         $employe = new Employe;
+        $employe->company_id = $request->get('company_id');
         $employe->first_name = $request->get('first_name');
         $employe->last_name = $request->get('last_name');
         $employe->email = $request->get('email');
