@@ -28,6 +28,7 @@
         <thead>
             <tr>
                 <th>No.</th>
+                <th>Company</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Phone</th>
@@ -42,6 +43,7 @@
             @foreach ($employes as $employe)
                 <tr>
                     <td>{{ $no++ }}</td>
+                    <td>{{ $employe->company->name }}</td>
                     <td>{{ $employe->first_name }}</td>
                     <td>{{ $employe->last_name }}</td>
                     <td>{{ $employe->phone }}</td>
