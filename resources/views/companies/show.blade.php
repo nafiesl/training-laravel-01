@@ -34,12 +34,39 @@
         </div>
     </div>
     <div class="col-7">
-        <div class="float-right">
+        <div class="text-right">
             <form action="{{ url('companies/'.$company->id) }}" method="post" style="display: inline;" onsubmit="return confirm('Are you sure to delete this company?');">
                 {{ csrf_field() }} {{ method_field('DELETE') }}
                 <button class="btn btn-danger">Delete Company</button>
             </form>
             <a href="{{ url('companies') }}" class="btn btn-secondary">Back to Company List</a>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-header">Employe List</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $no = 1;
+                    @endphp
+                    @foreach ($company->employes as $employe)
+                        <tr>
+                            <td>{{ $no++ }}</td>
+                            <td>{{ $employe->first_name }} {{ $employe->last_name }}</td>
+                            <td>{{ $employe->phone }}</td>
+                            <td>{{ $employe->email }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
