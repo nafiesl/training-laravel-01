@@ -10,4 +10,9 @@ class Employe extends Model
     {
         return $this->belongsTo(Company::class)->withDefault(['name' => 'Nganggur']);
     }
+
+    public function getNameAttribute()
+    {
+        return $this->first_name.' '.$this->last_name;
+    }
 }

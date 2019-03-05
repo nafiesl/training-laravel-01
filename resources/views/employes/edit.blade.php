@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-6">
         <div class="card">
-            <div class="card-header">Edit data {{ $employe->first_name }} {{ $employe->last_name }}</div>
+            <div class="card-header">Edit data {{ $employe->name }}</div>
             <form action="{{ url('employes/'.$employe->id) }}" method="post">
                 {{ csrf_field() }} {{ method_field('PATCH') }}
                 <div class="card-body">
@@ -45,7 +45,7 @@
     </div>
     <div class="col-6">
         <div class="alert alert-info">
-            Silakan isi formulir disamping untuk edit employe {{ $employe->first_name }} {{ $employe->last_name }}.
+            Silakan isi formulir disamping untuk edit employe {{ $employe->name }}.
         </div>
     </div>
 </div>

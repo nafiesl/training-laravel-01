@@ -60,7 +60,7 @@
                     @forelse ($company->employes as $employe)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $employe->first_name }} {{ $employe->last_name }}</td>
+                            <td>{{ $employe->name }}</td>
                             <td>{{ $employe->phone }}</td>
                             <td>{{ $employe->email }}</td>
                         </tr>

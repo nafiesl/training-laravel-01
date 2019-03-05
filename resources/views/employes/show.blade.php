@@ -6,7 +6,7 @@
     <div class="col-5">
         <div class="card">
             <div class="card-header">
-                {{ $employe->first_name }} {{ $employe->last_name }} detail
+                {{ $employe->name }} detail
                 <a href="{{ url('employes/'.$employe->id.'/edit') }}" class="float-right">Edit</a>
             </div>
             <div class="card-body">
